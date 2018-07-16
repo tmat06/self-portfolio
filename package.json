@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "custombox": "^4.0.3",
     "react": "^16.4.1",
+    "react-awesome-modal": "^2.0.3",
     "react-dom": "^16.4.1",
+    "react-motion-pack": "^0.1.9",
     "react-scripts": "1.1.4"
   },
   "scripts": {

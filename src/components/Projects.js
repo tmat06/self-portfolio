@@ -5,36 +5,54 @@ export default class Project extends React.Component {
   constructor() {
     super();
     this.state = {
-      project1: {
-        name: "Restaurant Roulette",
-        pictures: {
-          pic1: "/images/Title-Screen.PNG",
-          pic2: "/images/Results.PNG",
-          pic3: "/images/Profile.PNG",
-          pic4: "/images/google-maps.PNG"
+      projects: [
+        {
+          name: "Restaurant Roulette",
+          pictures: {
+            pic1: "/images/Title-Screen.PNG",
+            pic2: "/images/Results.PNG",
+            pic3: "/images/Profile.PNG",
+            pic4: "/images/google-maps.PNG"
+          },
+          description: "This is my project"
         },
-        description: "This is my project"
-      }
+        {
+          name: "test",
+          pictures: {
+            pic1: "/images/Results.PNG"
+          },
+          description: "hello"
+        },
+        {
+          name: "test",
+          pictures: {
+            pic1: "/images/Results.PNG"
+          },
+          description: "hello"
+        },
+        {
+          name: "test",
+          pictures: {
+            pic1: "/images/Results.PNG"
+          },
+          description: "hello"
+        }
+      ]
     };
   }
 
   render() {
     return (
       <div className="project">
-        <div className="project-3-row">
-          <ProjectDisplay project={this.state.project1} />
-          <ProjectDisplay project={this.state.project1} />
-          <ProjectDisplay project={this.state.project1} />
-        </div>
-        <div className="project-3-row">
-          <ProjectDisplay project={this.state.project1} />
-          <ProjectDisplay project={this.state.project1} />
-          <ProjectDisplay project={this.state.project1} />
-        </div>
-        {/* <ProjectDisplay />
-        <ProjectDisplay />
-        <ProjectDisplay />
-        <ProjectDisplay /> */}
+        {this.state.projects.map((val, i) => {
+          return (
+            <ProjectDisplay
+              key={i}
+              project={val}
+              openModal={this.props.openModal}
+            />
+          );
+        })}
       </div>
     );
   }

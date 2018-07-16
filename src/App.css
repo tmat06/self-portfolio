@@ -162,8 +162,10 @@ table {
 .project {
   width: 100%;
   background-color: grey;
-
-  /* flex-direction: column; */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* flex-direction: row; */
 }
 
 .project-image-container {
@@ -171,6 +173,7 @@ table {
   justify-content: space-around;
   align-content: center;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .project-display-container {
@@ -180,6 +183,9 @@ table {
   align-items: center;
   font-family: "Patua One", cursive;
   font-size: 25px;
+  margin: 10px;
+  box-sizing: border-box;
+  width: 414px;
 }
 
 .project-display-title-and-image {
@@ -187,18 +193,14 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 414px;
 }
 .project-display-title {
   margin: 10px;
 }
 .project-display-image {
-  height: 280;
-  width: "30vw";
-  object-fit: "cover";
+  height: 200;
+  object-fit: cover;
   border-radius: 25px;
-}
-
-.project-3-row {
-  display: flex;
-  justify-content: space-around;
+  width: 414px;
 }
