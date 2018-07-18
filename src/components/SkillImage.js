@@ -6,7 +6,7 @@ export default class SkillImage extends React.Component {
   }
 
   render() {
-    console.log("this.props", this.props.skill);
+    // console.log("this.props", this.props.skill);
     return (
       <div style={{ margin: 15 }}>
         <h2>{this.props.skill.name}</h2>

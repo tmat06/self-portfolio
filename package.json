@@ -8,6 +8,7 @@
     "react-awesome-modal": "^2.0.3",
     "react-dom": "^16.4.1",
     "react-motion-pack": "^0.1.9",
+    "react-parallax": "^1.8.0",
     "react-scripts": "1.1.4"
   },
   "scripts": {
