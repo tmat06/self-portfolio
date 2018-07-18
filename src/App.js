@@ -22,16 +22,27 @@ class App extends Component {
         { name: "CSS", icon: "/images/css.png" },
         { name: "JAVASCRIPT", icon: "/images/javascript.png" },
         { name: "GIT", icon: "/images/git.png" }
-      ]
+      ],
       // show: false
+      color: "blue"
       // scroll: true
     };
   }
 
   componentDidMount() {
-    // window.addEventListener("scroll", e =>
-    //   this.setState({ scroll: !this.state.scroll })
-    // );
+    window.addEventListener(
+      "scroll",
+      e => {
+        if (e.path[1].pageYOffset > 248) {
+          this.setState({ color: "black" });
+        } else {
+          this.setState({ color: "blue" });
+        }
+      }
+      // this.setState({ scroll: !this.state.scroll }, () => {
+      //   console.log(e.path[1].pageYOffset);
+      // })
+    );
   }
 
   openModal(project) {
@@ -43,6 +54,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header name={this.state.name} />
+        <div
+          style={{
+            backgroundColor: this.state.color,
+            height: 300,
+            width: "100%"
+          }}
+        />
         <Projects openModal={this.openModal.bind(this)} />
         <Modal
           visible={this.state.visible}
