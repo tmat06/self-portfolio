@@ -8,39 +8,34 @@ export default class ProjectDisplay extends React.Component {
     };
   }
   render() {
+    console.log("this.props.project", this.props.project);
     return (
       <div
-        className="project-display-container"
-        onClick={() => this.props.openModal(this.props.project)}
+        style={{
+          height: "100vh",
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center"
+        }}
       >
-        <div
-          className="project-display-title-and-image"
-          style={{ opacity: this.state.hover }}
-        >
-          <div className="project-display-title">{this.props.project.name}</div>
-          <div
-            className="project-image-container"
-            style={{ opacity: this.state.hover }}
-            onMouseOver={() => this.setState({ hover: "0.7" })}
-            onMouseOut={() => this.setState({ hover: 1 })}
-          >
-            <img
-              src={this.props.project.pictures.pic1}
-              className="project-display-image"
-              alt={`${this.props.project.name} Title Screen`}
-            />
-          </div>
-        </div>
-        {/* <p
-          style={{
-            width: "100%",
-            padding: "10px",
-            fontSize: "20px",
-            boxSizing: "border-box"
-          }}
-        >
-          {this.props.project.description}
-        </p> */}
+        <img
+          src={this.props.project.pictures.pic1}
+          alt="project Title Screen"
+          style={{ width: "80vw" }}
+        />
+        <p className="project-display-image-description">
+          abcde­fghijklmnopqrstu­vwxyz­abcde­fghijklmnopqrstu­vwxyz­abcd
+          dog1Duis ea laborum dolor fugiat. Culpa eiusmod dolor enim est do. Ad
+          proident cupidatat cillum labore amet officia anim. Quis quis culpa
+          nulla magna aliquip aliquip. Ipsum ipsum sunt ullamco id nulla
+          cupidatat proident sunt voluptate dolore ut. Voluptate magna id duis
+          cupidatat excepteur eu reprehenderit consectetur sint. Exercitation
+          proident nostrud culpa magna adipisicing laborum quis nulla commodo.
+          Proident exercitation reprehenderit cillum excepteur et reprehenderit
+          dolore adipisicing elit. Eiusmod in consectetur aute deserunt
+          excepteur commodo nisi aliqua aute eu eiusmod in cupidatat.
+        </p>
       </div>
     );
   }

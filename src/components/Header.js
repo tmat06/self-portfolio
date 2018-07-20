@@ -1,6 +1,6 @@
 import React from "react";
 import { Motion, spring } from "react-motion";
-import { Parallax, Background } from "react-parallax";
+import { Parallax } from "react-parallax";
 
 export default class Header extends React.Component {
   constructor() {
@@ -20,7 +20,7 @@ export default class Header extends React.Component {
         {style => {
           return (
             <Parallax
-              strength={600}
+              strength={650}
               bgImage="/images/officeWallpaper.jpg"
               bgWidth="100%"
               bgHeight="100vh"
