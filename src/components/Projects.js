@@ -44,10 +44,12 @@ export default class Project extends React.Component {
   render() {
     return (
       <div className="project">
+        <div id="project-header">Projects</div>
         {this.state.projects.map((val, i) => {
           return (
             <ProjectDisplay
               key={i}
+              index={i}
               project={val}
               openModal={this.props.openModal}
             />
